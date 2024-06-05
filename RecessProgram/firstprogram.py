@@ -1,5 +1,6 @@
 print('my program')
 
+
 # Ask the user for their name
 name = input("Enter your name: ")
 
@@ -9,7 +10,7 @@ color = input("Enter your favorite color: ")
 # Create a message by concatenating strings
 message = "Hello, " + name + "! Your favorite color is " + color + "."
 
-# Print the message
+#Print the message
 print(message)
 
 # Define the names of the nurses
@@ -22,7 +23,7 @@ is_new_nurse1 = True
 is_new_nurse2 = False
 
 
-# Print the names of the new nurses
+# Prints the names of the new nurses
 if is_new_nurse1:
     print(nurse1 + " is a new nurse.") 
     

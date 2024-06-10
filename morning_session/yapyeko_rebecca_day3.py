@@ -62,8 +62,9 @@ NOT                         ~
 #Python cases
 1.snake_case
 2.camelCase
-3.
-4.
+3.PascalCase
+4.UPPERCASE
+5.kebab-case
 
 """
 

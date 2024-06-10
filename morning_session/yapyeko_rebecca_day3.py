@@ -97,8 +97,7 @@ Create a list of tuples where each tuple contains
 a number and its cube for numbers
 between 1 and 10 using a dictionary comprehension
 """
-
-
+# Answer
 number_dictionary={number:number**3 for number in range (1,11)}
 number_cube_list= list(number_dictionary.items())
 print(number_cube_list)

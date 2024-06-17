@@ -129,7 +129,7 @@ class InvalidAgeError(Exception):
         self.message = message
         super().__init__(self.message)
 
-
+# SOLN 1
 def validate_age(age):
     try:
         if age < 0:
@@ -144,7 +144,22 @@ def validate_age(age):
     finally:
         print("Validation completed.")
 
+# SOLN 2
+def check_age():
+    age = int(input("Enter your age: "))
+    if age < 0:
+        raise InvalidAgeError(age)
+    else:
+        print(f"Age is {age}")
 
+try:
+    check_age()
+except InvalidAgeError as e:
+    print(e.message)
+else:
+    print("Valid age entered.")
+finally:
+    print("Age check complete.")
 
 
 

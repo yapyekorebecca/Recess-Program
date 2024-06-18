@@ -1,3 +1,5 @@
+
+
 # Error Hnadling in Python
 # Exception Hnadling with try, except , else , and finally 
 # custom exceptions 
@@ -23,12 +25,12 @@ NB: Used for cleaning up actions that
 
 try:
     number = int(input('Enter a number: '))
-    result =20/number
+    result = 20/number
     
 except ValueError:
     print ("Invalid number! Please enter a valid number ")
 
-except ZeroDivisionError:
+except ZeroDivisionError: 
     print("Error! Division by zero is not allowed")
     
 else:
@@ -70,29 +72,28 @@ class InsufficientFundsError(Exception):
     def __init__(self, balance, amount):
        self.balance=balance
        self.amount=amount
-       self.message=f"Attempt to withdraw {self.amount }with only {self.balance} in account"
+       self.message=f"Attempt to withdraw {self.amount }  with only {self.balance} in account"
        super().__init__(self.message)
        
-       
-def withdraw (balance,amount):
-    if amount > balance:
-        raise InsufficientFundsError(balance,amount)
-    return balance-amount
-
-# custom exception handling
-try:
-    balance=20000
-    amount_to_withdraw=100000
-    new_balance= withdraw(balance,amount_to_withdraw)
-
-except InsufficientFundsError as e:
-    print('Error: ')
     
-else: 
-    print("Withdraw")
 
+def withdraw(balance, amount):
+    if amount > balance:
+        raise InsufficientFundsError(balance, amount)
+    return balance - amount
+
+# Custom exceptions handling
+try:
+    balance = 20000
+    amount_to_withdraw = 100000
+    new_balance = withdraw(balance, amount_to_withdraw)
+    
+except InsufficientFundsError as e:
+    print(f"Error: {e.message}")
+else:
+    print(f"New balance is  {new_balance}")
 finally:
-    print("Transaction completed")
+    print("Transaction completed")
 
 # Note
 """_summary_
